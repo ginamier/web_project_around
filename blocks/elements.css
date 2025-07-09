@@ -44,6 +44,9 @@
 .elements__description-button:hover {
   opacity: 0.6;
 }
+.elements__description-button_active {
+  background-image: url(../images/heartfill.png);
+}
 @media screen and (max-width: 880px) {
   .elements {
     justify-content: space-around;
