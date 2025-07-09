@@ -1,0 +1,137 @@
+.profile {
+  max-height: 120px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+.profile__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.profile__info {
+  max-width: 415px;
+  min-height: 77px;
+  color: white;
+  display: flex;
+  margin-left: 30px;
+  margin-top: 22px;
+}
+
+.profile__info-name {
+  font-family: "Inter med";
+  font-size: 42px;
+  margin: 0px;
+  white-space: nowrap;
+}
+
+.profile__info-title {
+  font-family: "Inter";
+  font-size: 18px;
+  margin-top: 16px;
+}
+
+.profile__info-button {
+  width: 24px;
+  height: 24px;
+  border: 1px solid white;
+  background-color: black;
+  margin-left: 18px;
+  margin-top: 15px;
+}
+
+.profile__info-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.profile__add-button {
+  width: 150px;
+  height: 50px;
+  border: 1px solid white;
+  background-color: black;
+  margin-left: 165px;
+  margin-top: 35px;
+}
+
+.profile__add-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 540px) {
+  .profile {
+    width: 282px;
+    height: 1000px;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 141px;
+    margin-bottom: 36px;
+  }
+  .profile__avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 126px;
+  }
+
+  .profile__info {
+    max-width: 415px;
+    min-height: 77px;
+    color: white;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+  }
+
+  .profile__info-button {
+    width: 18px;
+    height: 18px;
+    border: 1px solid white;
+    background-color: black;
+    margin-left: 18px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .profile__info-button img {
+    width: 7.5px;
+    height: 7.5px;
+  }
+
+  .profile__info-name {
+    font-size: 22px;
+  }
+
+  .profile__info-title {
+    font-size: 14px;
+    margin-top: 14px;
+    margin-left: 80px;
+    margin-bottom: 0px;
+  }
+  .profile__add-button {
+    width: 282px;
+    height: 50px;
+    border: 1px solid white;
+    background-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    padding: 0px;
+  }
+  .profile__add-button img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    padding: 15px;
+  }
+}

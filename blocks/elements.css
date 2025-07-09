@@ -1,0 +1,65 @@
+.elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+}
+
+.elements__container {
+  width: 282px;
+  height: 361px;
+  background-color: white;
+  font-family: "Inter black";
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.elements__description {
+  display: flex;
+  justify-content: space-between;
+  width: 246px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+}
+
+.elements__description-title {
+  margin: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.elements__description-button {
+  border: none;
+  background-color: transparent;
+  background-image: url(../images/heart.png);
+  width: 21px;
+  height: 19px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.elements__description-button:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 540px) {
+  .elements {
+    justify-content: center;
+    height: auto;
+    max-width: 320px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .elements__container {
+    width: 282px;
+    height: 361px;
+    background-color: white;
+    font-family: "Inter black";
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,25 @@
+html,
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 540px) {
+  .body,
+  html {
+    width: 320px;
+  }
+
+  .page {
+    max-width: 320px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
