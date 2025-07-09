@@ -19,7 +19,7 @@
   background-color: white;
   width: 430px;
   height: 330px;
-  font-family: "Inter black";
+  font-family: "Inter black", sans-serif;
   border-radius: 10px;
   position: relative;
 }
@@ -44,7 +44,7 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 14px;
   color: black;
 }
@@ -57,7 +57,7 @@
   width: 358px;
   height: 50px;
   margin: 0 auto;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   color: #c4c4c4;
   background-color: black;
@@ -92,7 +92,7 @@
     background-color: white;
     width: 282px;
     height: 322px;
-    font-family: "Inter black";
+    font-family: "Inter black", sans-serif;
     border-radius: 10px;
   }
 

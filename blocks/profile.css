@@ -21,14 +21,14 @@
 }
 
 .profile__info-name {
-  font-family: "Inter med";
+  font-family: "Inter med", sans-serif;
   font-size: 42px;
   margin: 0px;
   white-space: nowrap;
 }
 
 .profile__info-title {
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   margin-top: 16px;
 }

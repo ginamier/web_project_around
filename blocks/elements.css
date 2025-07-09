@@ -10,7 +10,7 @@
   width: 282px;
   height: 361px;
   background-color: white;
-  font-family: "Inter black";
+  font-family: "Inter black", sans-serif;
   border-radius: 10px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -64,7 +64,7 @@
     width: 282px;
     height: 361px;
     background-color: white;
-    font-family: "Inter black";
+    font-family: "Inter black", sans-serif;
     border-radius: 10px;
     margin-bottom: 20px;
     overflow: hidden;
