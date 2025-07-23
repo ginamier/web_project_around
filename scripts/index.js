@@ -182,19 +182,19 @@ function submitAddCardForm(evt) {
   closeAddCardPopup();
 }
 
-const imagePopup = document.querySelector(".popup_type_image"); // El div completo del popup de imagen
-const imagePopupImage = imagePopup.querySelector(".popup__image"); // La imagen dentro del popup
-const imagePopupCaption = imagePopup.querySelector(".popup__caption"); // El pie de foto dentro del popup
-const imagePopupCloseButton = imagePopup.querySelector(".popup__close-button"); // El botón de cerrar de este popup
+const imagePopup = document.querySelector(".popup_type_image");
+const imagePopupImage = imagePopup.querySelector(".popup__image");
+const imagePopupCaption = imagePopup.querySelector(".popup__caption");
+const imagePopupCloseButton = imagePopup.querySelector(".popup__close-button");
 
 function openImagePopup(name, link) {
-  imagePopupImage.src = link; // Establece la fuente de la imagen
-  imagePopupImage.alt = name; // Establece el texto alternativo
-  imagePopupCaption.textContent = name; // Establece el pie de foto
-  imagePopup.classList.add("popup__opened"); // Muestra el popup
+  imagePopupImage.src = link;
+  imagePopupImage.alt = name;
+  imagePopupCaption.textContent = name;
+  imagePopup.classList.add("popup__opened");
 }
 function closeImagePopup() {
-  imagePopup.classList.remove("popup__opened"); // Oculta el popup
+  imagePopup.classList.remove("popup__opened");
 }
 
 imagePopupCloseButton.addEventListener("click", closeImagePopup);
