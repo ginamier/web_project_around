@@ -18,7 +18,7 @@
 .popup__container {
   background-color: white;
   width: 430px;
-  height: 330px;
+  height: 350px;
   font-family: "Inter black", sans-serif;
   border-radius: 10px;
   position: relative;
@@ -40,7 +40,7 @@
 .popup__input {
   width: 358px;
   margin: 0 auto;
-  margin-bottom: 29.7px;
+  margin-bottom: 0;
   border-bottom: 1px #c4c4c4 solid;
   border-top: none;
   border-left: none;
@@ -48,12 +48,36 @@
   font-family: "Inter", sans-serif;
   font-size: 14px;
   color: black;
+  padding-bottom: 13px;
 }
+
 .popup__input_type_about {
-  margin-bottom: 48px;
+  margin-bottom: 0px;
 }
 .popup__input::placeholder {
   color: #c4c4c4;
+}
+
+.popup__input_invalid {
+  border-bottom: 1px red solid;
+}
+
+.popup__input-error-message {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: red;
+  margin-left: 36px;
+  margin-top: 7px;
+  padding-top: 0;
+  margin-bottom: 9px;
+  visibility: hidden;
+}
+.popup__input-error-message_active {
+  visibility: visible;
+}
+
+#popup-input-about-error-message {
+  margin-bottom: 38px;
 }
 
 .popup__button {
@@ -64,6 +88,18 @@
   font-size: 18px;
   color: #c4c4c4;
   background-color: black;
+  border: 1px #c4c4c4 solid;
+  border-radius: 2px;
+}
+
+.popup__button_inactive {
+  width: 358px;
+  height: 50px;
+  margin: 0 auto;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  color: #c4c4c4;
+  background-color: white;
   border: 1px #c4c4c4 solid;
   border-radius: 2px;
 }
@@ -103,7 +139,7 @@
 }
 
 .popup__input_type_url {
-  margin-bottom: 48px;
+  margin-bottom: 0px;
 }
 
 .popup-add-card_opened {
@@ -143,20 +179,24 @@
   .popup__container {
     background-color: white;
     width: 282px;
-    height: 322px;
+    height: 330px;
     font-family: "Inter black", sans-serif;
     border-radius: 10px;
   }
 
   .popup__input {
     width: 238px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+  }
+
+  .popup__input-error {
+    margin-left: 20px;
   }
 
   .popup__button {
     width: 238px;
     height: 46px;
-    margin-top: 16px;
+    margin-top: 0px;
   }
   .popup__close-button {
     width: 26px;
