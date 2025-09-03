@@ -130,9 +130,20 @@
         <button type="button" class="popup__close-button"></button>
         <img src="#" alt="Descripción de la imagen" class="popup__image" />
         <p class="popup__caption"></p>
-        <script src="./scripts/validate.js"></script>
-        <script src="./scripts/index.js"></script>
       </div>
     </div>
+    <template id="card-template">
+      <div class="elements__container">
+        <img src="#" alt="" class="elements__image" />
+        <div class="elements__description">
+          <h2 class="elements__description-title"></h2>
+          <button type="button" class="elements__like-button"></button>
+        </div>
+        <button type="button" class="elements__remove-button"></button>
+      </div>
+    </template>
+    <script src="./scripts/card.js" type="module"></script>
+    <script src="./scripts/FormValidator.js" type="module"></script>
+    <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>
