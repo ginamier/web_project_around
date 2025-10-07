@@ -30,9 +30,6 @@ let cardSection;
 
 Promise.all([api.getUserInfo(), api.getInitialCards()])
   .then(([userInfoData, cards]) => {
-    console.log("Usuario:", userInfoData);
-    console.log("Tarjetas:", cards);
-
     userInfo.setUserInfo({
       name: userInfoData.name,
       about: userInfoData.about,
@@ -83,21 +80,17 @@ Promise.all([api.getUserInfo(), api.getInitialCards()])
                   });
               }
             }
-          ); //CIERRA CONSTRUCTOR CARD
+          );
 
           const cardElement = card.generateCard();
           return cardElement;
-        }, //CIERRA RENDERER
-      }, //CIERRA 1 PARAMETRO ARRAY DE NEW SECTION
+        },
+      },
       ".elements"
-    ); //CIERRA NEW SECTION
+    );
     cardSection.renderItems();
 
-    /*TODO: agregar handledelete*/
-
     const addCardPopup = new PopupWithForm(".popup-add-card", (formData) => {
-      console.log("Datos del formulario:", formData);
-
       api
         .postCard(formData)
         .then((cardData) => {
