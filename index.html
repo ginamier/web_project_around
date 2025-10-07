@@ -25,11 +25,18 @@
 
       <main class="content">
         <section class="profile">
-          <img
-            src="./images/jacques.jpg"
-            alt="Foto de Jacques Cousteau"
-            class="profile__avatar"
-          />
+          <div class="profile__avatar-container">
+            <img
+              src="./images/jacques.jpg"
+              alt="Foto de Jacques Cousteau"
+              class="profile__avatar"
+            />
+            <img
+              src="./images/Vectoredit.png"
+              alt="edit button"
+              class="profile__edit-icon"
+            />
+          </div>
           <div class="profile__info">
             <div class="profile__info-container">
               <h1 class="profile__info-name">Jacques Cousteau</h1>
@@ -45,6 +52,28 @@
         </section>
         <section class="elements"></section>
       </main>
+
+      <div class="popup popup__type_edit_avatar">
+        <div class="popup__container">
+          <button type="button" class="popup__close-button"></button>
+          <h3 class="popup__title">Cambiar foto de perfil</h3>
+          <form class="popup__form" name="edit-avatar">
+            <input
+              type="url"
+              class="popup__input popup__input_type_avatar"
+              name="avatar"
+              placeholder="URL del avatar"
+              id="popup-input-avatar"
+              required
+            />
+            <span
+              class="popup__input-error-message"
+              id="popup-input-avatar-error-message"
+            ></span>
+            <button type="submit" class="popup__button">Guardar</button>
+          </form>
+        </div>
+      </div>
       <div class="popup popup_type_edit_profile">
         <div class="popup__container">
           <button type="button" class="popup__close-button"></button>
@@ -91,7 +120,7 @@
             <input
               type="text"
               class="popup__input popup__input_type_title"
-              name="title"
+              name="name"
               placeholder="Título"
               id="popup-input-title"
               required
@@ -106,7 +135,7 @@
             <input
               type="url"
               class="popup__input popup__input_type_url"
-              name="url"
+              name="link"
               placeholder="Enlace de la imagen"
               id="popup-input-url"
               required
@@ -118,6 +147,14 @@
             >
             <button type="submit" class="popup__button">Crear</button>
           </form>
+        </div>
+      </div>
+
+      <div class="popup popup-with-confirmation">
+        <div class="popup__container_type_confirmation">
+          <button type="button" class="popup__close-button"></button>
+          <h3 class="popup__title_confirmation">¿Estás Seguro?</h3>
+          <button type="button" class="popup__button_confirmation">Sí</button>
         </div>
       </div>
 

@@ -13,6 +13,6 @@ export default class Section {
   }
 
   addItem(element) {
-    this._container.prepend(element); // prepend si quieres que los nuevos vayan al inicio
+    this._container.append(element);
   }
 }
