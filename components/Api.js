@@ -1,7 +1,7 @@
 export default class Api {
-  constructor(options) {
-    this._baseUrl = options.baseUrl;
-    this._headers = options.headers;
+  constructor({ baseUrl, headers }) {
+    this._baseUrl = baseUrl;
+    this._headers = headers;
   }
 
   getUserInfo() {
@@ -10,8 +10,9 @@ export default class Api {
     }).then((res) => {
       if (res.ok) {
         return res.json();
+      } else {
+        return Promise.reject(`Error: ${res.status}`);
       }
-      return Promise.reject(`Error: ${res.status}`);
     });
   }
 
@@ -21,24 +22,23 @@ export default class Api {
     }).then((res) => {
       if (res.ok) {
         return res.json();
+      } else {
+        return Promise.reject(`Error: ${res.status}`);
       }
-      return Promise.reject(`Error: ${res.status}`);
     });
   }
 
-  postCard(cardData) {
+  postCard(formValues) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
-      headers: {
-        ...this._headers,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(cardData),
+      headers: this._headers,
+      body: JSON.stringify(formValues),
     }).then((res) => {
       if (res.ok) {
         return res.json();
+      } else {
+        return Promise.reject(`Error: ${res.status}`);
       }
-      return Promise.reject(`Error: ${res.status}`);
     });
   }
 
@@ -49,8 +49,9 @@ export default class Api {
     }).then((res) => {
       if (res.ok) {
         return res.json();
+      } else {
+        return Promise.reject(`Error: ${res.status}`);
       }
-      return Promise.reject(`Error: ${res.status}`);
     });
   }
 
@@ -61,8 +62,9 @@ export default class Api {
     }).then((res) => {
       if (res.ok) {
         return res.json();
+      } else {
+        return Promise.reject(`Error: ${res.status}`);
       }
-      return Promise.reject(`Error: ${res.status}`);
     });
   }
 
@@ -73,8 +75,9 @@ export default class Api {
     }).then((res) => {
       if (res.ok) {
         return res.json();
+      } else {
+        return Promise.reject(`Error: ${res.status}`);
       }
-      return Promise.reject(`Error: ${res.status}`);
     });
   }
 
@@ -88,24 +91,26 @@ export default class Api {
     }).then((res) => {
       if (res.ok) {
         return res.json();
+      } else {
+        return Promise.reject(`Error: ${res.status}`);
       }
-      return Promise.reject(`Error: ${res.status}`);
     });
   }
 
-  updateProfileInfo(formData) {
+  updateProfileInfo(formValues) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       headers: this._headers,
       body: JSON.stringify({
-        name: formData.name,
-        about: formData.about,
+        name: formValues.name,
+        about: formValues.about,
       }),
     }).then((res) => {
       if (res.ok) {
         return res.json();
+      } else {
+        return Promise.reject(`Error: ${res.status}`);
       }
-      return Promise.reject(`Error: ${res.status}`);
     });
   }
 }

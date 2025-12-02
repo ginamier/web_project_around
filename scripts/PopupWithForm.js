@@ -1,12 +1,38 @@
 import Popup from "./Popup.js";
 
 export default class PopupWithForm extends Popup {
-  constructor(popupSelector, handleFormSubmit) {
+  constructor({ popupSelector, handleSubmit, openButton }) {
     super(popupSelector);
-    this._submitCallback = handleFormSubmit;
+    this._handleSubmit = handleSubmit;
     this._form = this._popup.querySelector("form");
+    this._submitButton = this._form.querySelector(".popup__button");
+    this._originalButtonText = this._submitButton.textContent;
+    this._onFormSubmit = this._onFormSubmit.bind(this);
+    this._openButton = openButton;
+  }
 
-    this._handleFormSubmit = this._handleFormSubmit.bind(this);
+  setEventListeners() {
+    super.setEventListeners();
+    this._form.addEventListener("submit", this._onFormSubmit);
+    if (this._openButton) {
+      this._openButton.addEventListener("click", () => {
+        this.open();
+      });
+    }
+  }
+
+  renderLoading(isLoading, loadingText = "Guardando...") {
+    if (isLoading) {
+      this._submitButton.textContent = loadingText;
+    } else {
+      this._submitButton.textContent = this._originalButtonText;
+    }
+  }
+
+  _onFormSubmit(evt) {
+    evt.preventDefault();
+    const formValues = this._getInputValues();
+    this._handleSubmit(formValues);
   }
 
   _getInputValues() {
@@ -16,19 +42,8 @@ export default class PopupWithForm extends Popup {
     return formValues;
   }
 
-  _handleFormSubmit(evt) {
-    evt.preventDefault();
-    const formData = this._getInputValues();
-    this._submitCallback(formData);
-  }
-
-  setEventListeners() {
-    super.setEventListeners();
-    this._form.addEventListener("submit", this._handleFormSubmit);
-  }
-
   close() {
-    super.close();
     this._form.reset();
+    super.close();
   }
 }
